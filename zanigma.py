@@ -12,13 +12,10 @@ class ZANIGMA:
     	shuffle(self.black)
     	
     def step(self):
-         self.red.append(self.red.pop(0))
-         self.black.append(self.black.pop(0))
-         for x in range(self.red[0]):
-              self.black.append(self.black.pop(0))
+         self.red.insert(self.black[self.black[0]], self.red.pop(0))
 
-         for x in range(self.black[0]):
-              self.red.append(self.red.pop(0))
+         self.black.insert(self.red[self.red[0]], self.black.pop(0))
+    		
     		
     def encrypt_letter(self, letter):
         self.step()
@@ -47,3 +44,9 @@ class ZANIGMA:
             letter = self.decrypt_letter(letters[x])
             ptxt.append(letter)
         return "".join(ptxt)
+        
+zanigma = ZANIGMA()
+zanigma.gen_rand_decks()
+msg = "HELLOWORLD"
+ctxt = zanigma.encrypt(msg)
+print(ctxt)
