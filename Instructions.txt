@@ -1,0 +1,33 @@
+Zanigma Playing Card Cipher
+
+Estimated strength: 89 bits
+
+Card Values
+AH = 0, 2H = 1, 3H = 2, 4H = 3, 5H = 4, 6H = 5, 7H = 6, 8H = 7, 9H = 8, 10H = 9, JH = 10, QH = 11, KH = 12, AD = 13, 2D = 14, 3D = 15, 4D = 16, 5D = 17, 6D = 18, 7D = 19, 8D = 20, 9D = 21, 10D = 22, JD = 23, QD = 24, KD = 25
+
+AC = 0, 2C = 1, 3C = 2, 4C = 3, 5C = 4, 6C = 5, 7C = 6, 8C = 7, 9C = 8, 10C = 9, JC = 10, QC = 11, KC = 12, AS = 13, 2S = 14, 3S = 15, 4S = 16, 5S = 17, 6S = 18, 7D = 19, 8S = 20, 9S = 21, 10S = 22, JS = 23, QS = 24, KS = 25
+
+
+Keying procedure:
+
+Each deck is spit into two colored halves red and black. Each deck is one half of the key. The order is determined by sender and receiver.
+
+Stepping procedure:
+
+With decks facing up: first card in the red deck indicates the position in the black deck to move the first black card. Let's say the first card in the red deck is the 3D and let's say the first card in the black deck is the 4C. Since the 3 of Diamonds equals 15 you will take 15 cards in the red deck after the 4 of Clubs and then insert the 3 there. All other cards stay in the order they were in.
+
+Next, you do the same procedure to the red deck. Supposing after the above operation the Jack of Spades is now the first card in the black deck you can do this procedure differently for speed. Since the JS equals 23 you can card just take the last 2 cards of thr red deck and place the first card of the red deck there. Easy.
+
+Encryption procedure:
+
+Look up the card position number that matches the letter represented as a card value. So let's say the letter you want to encrypt is E that would be a 4. Find the card in the fourth position always starting from zero.
+
+Take that letter and run the same procedure for the black deck.
+
+Decryption procedure:
+
+The deck order is switched so that the black is first and red second.
+
+The letter we'll use is J and so you'll do something different here : Find the card representing J in the black deck. In this case the card is the Queen of Diamonds. Calculate which position is the QD and that will be the letter output to the red deck.
+
+Red deck operation is same as above.
