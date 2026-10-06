@@ -3,17 +3,19 @@
 from random import shuffle
 
 class ZANIGMA:
-    def __init__(self):
-        self.red = list(range(26))
-        self.black = list(range(26))
+    def __init__(self, key1=None, key2=None):
+        if key1 is None:
+            self.red = list(range(26))
+        if key2 is None:
+            self.black = list(range(26))
         
     def gen_rand_decks(self):
     	shuffle(self.red)
     	shuffle(self.black)
     	
     def step(self):
-         self.black.insert(self.red[self.red[0]], self.black.pop(0))
-         self.red.insert(self.black[self.black[0]], self.red.pop(0))
+         self.black.insert(self.red[0], self.black.pop(0))
+         self.red.insert(self.black[0], self.red.pop(0))
     		
     		
     def encrypt_letter(self, letter):
@@ -43,9 +45,3 @@ class ZANIGMA:
             letter = self.decrypt_letter(letters[x])
             ptxt.append(letter)
         return "".join(ptxt)
-        
-zanigma = ZANIGMA()
-zanigma.gen_rand_decks()
-msg = "HELLOWORLD"
-ctxt = zanigma.encrypt(msg)
-print(ctxt)
