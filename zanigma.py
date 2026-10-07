@@ -6,8 +6,12 @@ class ZANIGMA:
     def __init__(self, key1=None, key2=None):
         if key1 is None:
             self.red = list(range(26))
+        else:
+        	self.red = list(key1)
         if key2 is None:
             self.black = list(range(26))
+        else:
+        	self.black = list(key2)
         
     def gen_rand_decks(self):
     	shuffle(self.red)
