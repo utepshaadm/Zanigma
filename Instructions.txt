@@ -1,6 +1,6 @@
 Zanigma Playing Card Cipher
 
-Estimated strength: 89 bits
+Estimated strength: 176 bits
 
 Card Values
 AH = 0, 2H = 1, 3H = 2, 4H = 3, 5H = 4, 6H = 5, 7H = 6, 8H = 7, 9H = 8, 10H = 9, JH = 10, QH = 11, KH = 12, AD = 13, 2D = 14, 3D = 15, 4D = 16, 5D = 17, 6D = 18, 7D = 19, 8D = 20, 9D = 21, 10D = 22, JD = 23, QD = 24, KD = 25
