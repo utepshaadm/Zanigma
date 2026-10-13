@@ -13,6 +13,7 @@ Keying procedure:
 Each deck is spit into two colored halves red and black. Each deck is one half of the key. The order is determined by sender and receiver.
 
 Stepping procedure:
+Remove the first card of both decks and place it in the rear.
 
 With decks facing up: first card in the red deck indicates the position in the black deck to move the first black card. Let's say the first card in the red deck is the 3D and let's say the first card in the black deck is the 4C. Since the 3 of Diamonds equals 15 you will take 15 cards in the red deck after the 4 of Clubs and then insert the 3 there. All other cards stay in the order they were in.
 
