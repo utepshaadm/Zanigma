@@ -16,6 +16,11 @@ class ZANIGMA:
     def gen_rand_decks(self):
     	shuffle(self.red)
     	shuffle(self.black)
+    
+    def add_nonce(self, red, black):
+    	for x in range(26):
+    		self.red.append(self.red.pop(red[x]))
+    		self.black.append(self.black.pop(black[x]))
     	
     def step(self):
          self.black.append(self.black.pop(0))
